@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
-include_once __DIR__ . "/../includes/header.php";
+require "../includes/auth.php";
+require "../config/db.php";
+include "../includes/header.php";
 
 $id = (int)($_GET["id"] ?? 0);
 
@@ -11,7 +11,7 @@ $patient = $stmt->fetch();
 
 if (!$patient) {
     echo "<p class='error'>Patient not found.</p>";
-    include_once __DIR__ . "/../includes/footer.php";
+    include "../includes/footer.php";
     exit;
 }
 
@@ -52,4 +52,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <button type="submit">Update</button>
 </form>
 
-<?php include_once __DIR__ . "/../includes/footer.php"; ?>
+<?php include "../includes/footer.php"; ?>

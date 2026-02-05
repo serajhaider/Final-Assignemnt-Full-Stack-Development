@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
-include_once __DIR__ . "/../includes/header.php";
+require "../includes/auth.php";
+require "../config/db.php";
+include "../includes/header.php";
+
 
 $patients = $pdo->query("SELECT patient_id, full_name FROM patients ORDER BY full_name")->fetchAll();
 $doctors  = $pdo->query("SELECT doctor_id, full_name FROM doctors ORDER BY full_name")->fetchAll();
@@ -46,4 +47,5 @@ $doctors  = $pdo->query("SELECT doctor_id, full_name FROM doctors ORDER BY full_
 
 <script src="../assets/js/availability.js"></script>
 
-<?php include_once __DIR__ . "/../includes/footer.php"; ?>
+<?php include "../includes/footer.php"; ?>
+

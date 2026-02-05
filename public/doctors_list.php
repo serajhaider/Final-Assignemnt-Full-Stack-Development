@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
-include_once __DIR__ . "/../includes/header.php";
+require "../includes/auth.php";
+require "../config/db.php";
+include "../includes/header.php";
 
 $stmt = $pdo->query("SELECT * FROM doctors ORDER BY doctor_id DESC");
 $doctors = $stmt->fetchAll();
@@ -35,4 +35,4 @@ $doctors = $stmt->fetchAll();
     <?php endforeach; ?>
 </table>
 
-<?php include_once __DIR__ . "/../includes/footer.php"; ?>
+<?php include "../includes/footer.php"; ?>

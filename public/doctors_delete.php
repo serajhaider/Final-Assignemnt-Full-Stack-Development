@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
+require "../includes/auth.php";
+require "../config/db.php";
 
 $id = (int)($_GET["id"] ?? 0);
 

@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
+require "../includes/auth.php";
+require "../config/db.php";
 
 $id = (int)($_GET["id"] ?? 0);
 
@@ -9,7 +9,7 @@ if ($id > 0) {
         $stmt = $pdo->prepare("DELETE FROM patients WHERE patient_id = ?");
         $stmt->execute([$id]);
     } catch (Exception $e) {
-        // You can log this if needed; keep silent for users
+        
     }
 }
 

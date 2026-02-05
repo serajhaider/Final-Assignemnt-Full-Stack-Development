@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
+require "../includes/auth.php";
+require "../config/db.php";
 
 $appointment_id   = (int)($_POST["appointment_id"] ?? 0);
 $patient_id       = (int)($_POST["patient_id"] ?? 0);

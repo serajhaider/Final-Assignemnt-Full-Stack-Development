@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../includes/auth.php";
-require_once __DIR__ . "/../config/db.php";
-include_once __DIR__ . "/../includes/header.php";
+require "../includes/auth.php";
+require "../config/db.php";
+include "../includes/header.php";
 
 $error = "";
 
@@ -40,4 +40,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <button type="submit">Save</button>
 </form>
 
-<?php include_once __DIR__ . "/../includes/footer.php"; ?>
+<?php include "../includes/footer.php"; ?>
